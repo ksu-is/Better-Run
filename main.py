@@ -1,3 +1,5 @@
+# Assuming that we run this page first, will put in chronological order after i get it running
+
 import tmxreader
 import random, copy, math, os, pygame, sys, player, AI, tiledtmxloader, MENU
 from pygame.locals import *
@@ -392,19 +394,19 @@ def runGame(MAP_NUMBER):
         if moveRight:
             step_x += MOVERATE
             if not p.isJumping():
-                if frame_count is 20:
+                if frame_count == 20:
                     p.change_sprite(
                     IMAGESDICT['run1']
                     )
-                elif frame_count is 40:
+                elif frame_count == 40:
                     p.change_sprite(
                     IMAGESDICT['run2']
                     )
-                elif frame_count is 60:
+                elif frame_count == 60:
                     p.change_sprite(
                     IMAGESDICT['run3']
                     )
-                elif frame_count is 80:
+                elif frame_count == 80:
                     p.change_sprite(
                     IMAGESDICT['run4']
                     )
