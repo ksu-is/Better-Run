@@ -1,4 +1,3 @@
-PyRun
-=====
+A funner and better temple run, hopefully
 
-2D side-scrolling game inspired by Temple Run, written using PyGame
+orginally link wzs in C# and i dont know what that is so...
