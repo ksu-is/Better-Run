@@ -189,7 +189,8 @@ def main():
         'log': pygame.image.load('img/log.png'),
         'mud': pygame.image.load('img/MudSplashingImages/mud.png'),
         'mud2': pygame.image.load('img/MudSplashingImages/mud_sp.png'),
-        'tidalWave': pygame.image.load('img/TidalWave.png')
+        'tidalWave': pygame.image.load('img/TidalWave.png'),
+        'banannaguy':image.load('img/banannaguy.png')
         }
 
     
@@ -199,14 +200,12 @@ def main():
     # currentImage is the index of the player's current player image.
     currentImage = 0
     # PLAYERIMAGES =   
-    [IMAGESDICT['bananaguy'],
+    [IMAGESDICT['banannaguy'],
     [IMAGESDICT['princess']]
 
-  
-def initializeLevel():
 
      # parse the level map
-    level_map = tiledtmxloader.tmxreader.TileMapParser().parse_decode(file_name)
+    level_map = (tiledtmxloader.tmxreader.TileMapParser().parse_decode(file_name)
 
     # load the images using pygame
     resources = tiledtmxloader.helperspygame.ResourceLoaderPygame()
@@ -236,7 +235,11 @@ def initializeLevel():
     # set initial cam position and size
     renderer.set_camera_position_and_size(cam_x, cam_y, WINWIDTH, WINHEIGHT)
 
-    return sprite_layers, player_sprite, player_layer, renderer
+    def initializeLevel(file_name,player_layer,player)
+    
+        return sprite_layers, player_sprite, player_layer, renderer
+    
+    initialize_level()
 
 def game_intro(MAP_NUMBER):
     '''

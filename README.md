@@ -1,3 +1,8 @@
 A funner and better temple run, hopefully
 
-orginally link wzs in C# and i dont know what that is so...
+#1 
+to run intall pygame module by running pip command.
+#1
+run tmxreder using pip command
+#3
+

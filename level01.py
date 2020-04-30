@@ -1,5 +1,6 @@
 import random, copy, os, pygame, sys, constants, level
 from pygame.locals import *
+levelbase= Level
 
 class level(levelbase.Level):
 
@@ -34,7 +35,7 @@ class level(levelbase.Level):
                 [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]]
 
     def getSprites(self):
-        air= pygame.image.load('air.png')
-        ground = pygame.image.load('ground.png')
+        air= image.load('airnew')
+        ground = image.load('groundnew.png')
 
         return [air,ground]
