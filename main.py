@@ -164,7 +164,7 @@ def main():
     
     from PIL import Image
     IMAGESDICT = {
-        'title': pygame.image.load('img/title.png'),
+        'title': image.load('title.png'),
         'player': pygame.image.load('img/run_01.png'),
         'jump1': pygame.image.load('img/jump_01.png'),
         'jump2': pygame.image.load('img/jump_02.png'),
