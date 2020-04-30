@@ -161,6 +161,8 @@ def main():
 
     # This is a global Dict object (or dictionary object) which
     # contains all of the images that we will use in the game
+    
+    from PIL import Image
     IMAGESDICT = {
         'title': pygame.image.load('img/title.png'),
         'player': pygame.image.load('img/run_01.png'),
@@ -190,16 +192,18 @@ def main():
         'tidalWave': pygame.image.load('img/TidalWave.png')
         }
 
+    
+
+
     # PLAYERIMAGES is a list of all possible characters the player can be.
     # currentImage is the index of the player's current player image.
     currentImage = 0
-    # PLAYERIMAGES = [IMAGESDICT['princess']]
+    # PLAYERIMAGES =   
+    [IMAGESDICT['bananaguy'],
+    [IMAGESDICT['princess']]
 
-    Map_Num = startScreen() # function which shows the start menu
-
-    runGame(Map_Num) # run the game
-
-def initializeLevel(file_name, player_layer, player):
+  
+def initializeLevel():
 
      # parse the level map
     level_map = tiledtmxloader.tmxreader.TileMapParser().parse_decode(file_name)
@@ -234,7 +238,7 @@ def initializeLevel(file_name, player_layer, player):
 
     return sprite_layers, player_sprite, player_layer, renderer
 
-def runGame(MAP_NUMBER):
+def game_intro(MAP_NUMBER):
     '''
         Set up initial player object.
         This object contains the following keys:
@@ -559,7 +563,8 @@ def runGame(MAP_NUMBER):
         frame_count += 1
 
         pygame.display.update()
-        FPSCLOCK.tick()
+        FPSCLOCK.tick(5)
+game_intro()
 
 def startScreen():
     # Position the title image.
@@ -616,8 +621,10 @@ def startScreen():
             elif event.type == QUIT:
                 pygame.display.quit()
                 sys.exit()
-        pygame.time.wait(8)
+        pygame.time.wait(5)
 
+startScreen()
+                
 
 def check_game_end(player, step_x, step_y, coll_layer):
     isColliding = False
@@ -735,3 +742,5 @@ def terminate():
 # If so it runs the main() function.
 if __name__ == '__main__':
     main()
+game_intro()
+
